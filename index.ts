@@ -56,13 +56,13 @@ function repeat(numReps: number, callbackFn: (ix: number) => void): void {
  *
  * @example
  * Here's a simple example:
- * ```
+ * ```javascript
  * // evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
  * zip([10, 20, 30], ["a", "b", "c"])
  * ```
  * @example
  * Here's an example where excess elements on one side are ignored:
- * ```
+ * ```javascript
  * // evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
  * zip([10, 20, 30, 40, 50], ["a", "b", "c"])
  * ```
