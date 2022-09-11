@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "rm -rf ./dist && tsc",
     "start:dev": "ts-node index.ts"
   },
   "devDependencies": {
