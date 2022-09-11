@@ -11,6 +11,7 @@
  *
  * @param numElems - number of elements to populate the array with.
  * @param creatorCallback - a function to call
+ * @returns new array of collected generated elements
  * @public
  */
 
