@@ -13,7 +13,9 @@
   "scripts": {
     "test": "jest",
     "build": "rm -rf ./dist && tsc",
-    "start:dev": "ts-node index.ts"
+    "start:dev": "ts-node index.ts",
+    "extract-api": "yarn build && api-extractor run --local --verbose",
+    "postinstall": "mkdir -p etc"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
