@@ -1,6 +1,6 @@
 {
   "name": "@nbogie/useful-array-functions-2",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Useful array functions - typescript version",
   "main": "dist/index.js",
   "author": "nbogie",
