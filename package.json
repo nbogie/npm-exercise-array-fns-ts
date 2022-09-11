@@ -14,8 +14,9 @@
     "test": "jest",
     "build": "rm -rf ./dist && tsc",
     "start:dev": "ts-node index.ts",
+    "postinstall": "mkdir -p etc",
     "extract-api": "yarn build && api-extractor run --local --verbose",
-    "postinstall": "mkdir -p etc"
+    "gen-docs": "yarn extract-api && yarn api-documenter markdown  --input-folder temp --output-folder docs/api"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
