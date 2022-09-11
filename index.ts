@@ -37,15 +37,12 @@ function collect<T>(numElems: number, creatorCallback: (ix: number) => T): T[] {
  * @param {actionCallback} callbackFn will be called numReps times, and each time passed an argument from 0 to numReps-1
  * @returns {void} returns nothing.  The return values from the actionCallback are ignored.
  */
-function repeat(numReps, callbackFn) {
+
+function repeat(numReps: number, callbackFn: (ix: number) => void): void {
   for (let i = 0; i < numReps; i++) {
     callbackFn(i);
   }
 }
-
-/**
- * @typedef {string[]} Pair
- */
 
 /** Combine the elements of two given arrays into a single array of pairs.
  * If the input arrays are not the same length, excess elements will be ignored.
@@ -53,18 +50,17 @@ function repeat(numReps, callbackFn) {
  * @param {any[]} inputArr2
  * @returns {Pair[]} array of tuples (2-element array)
  */
-function zip(inputArr1, inputArr2) {
+function zip<T, U>(inputArr1: T[], inputArr2: U[]): [T, U][] {
   const results = [];
   let ix = 0;
   while (ix < inputArr1.length && ix < inputArr2.length) {
     const a = inputArr1[ix];
     const b = inputArr2[ix];
-    /** @type Pair */
-    const pair = [a, b];
+    const pair: [T, U] = [a, b];
     results.push(pair);
     ix++;
   }
   return results;
 }
 
-module.exports = { collect, repeat, zip };
+export { collect, repeat, zip };
