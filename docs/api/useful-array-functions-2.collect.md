@@ -17,7 +17,7 @@ declare function collect<T>(numElems: number, creatorCallback: (ix: number) => T
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  numElems | number | number of elements to populate the array with. |
-|  creatorCallback | (ix: number) =&gt; T | a function to call |
+|  creatorCallback | (ix: number) =&gt; T | a function to call, to generate an element. |
 
 <b>Returns:</b>
 

@@ -10,7 +10,7 @@
  * Create an array populated by the results of a given number of calls to a given creator function.
  *
  * @param numElems - number of elements to populate the array with.
- * @param creatorCallback - a function to call
+ * @param creatorCallback - a function to call, to generate an element.
  * @returns new array of collected generated elements
  * @public
  */
@@ -51,8 +51,21 @@ function repeat(numReps: number, callbackFn: (ix: number) => void): void {
  * If the input arrays are not the same length, excess elements will be ignored.
  * @param inputArr1 - first array
  * @param inputArr2 - second array
- * @returns array of tuples
+ * @returns array of tuples, each tuple containing an element of first and second array
  * @public
+ *
+ * @example
+ * Here's a simple example:
+ * ```
+ * // evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
+ * zip([10, 20, 30], ["a", "b", "c"])
+ * ```
+ * @example
+ * Here's an example where excess elements on one side are ignored:
+ * ```
+ * // evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
+ * zip([10, 20, 30, 40, 50], ["a", "b", "c"])
+ * ```
  */
 function zip<T, U>(inputArr1: T[], inputArr2: U[]): [T, U][] {
   const results = [];

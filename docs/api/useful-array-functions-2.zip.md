@@ -23,5 +23,23 @@ declare function zip<T, U>(inputArr1: T[], inputArr2: U[]): [T, U][];
 
 \[T, U\]\[\]
 
-array of tuples
+array of tuples, each tuple containing an element of first and second array
+
+## Example 1
+
+Here's a simple example:
+
+```
+// evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
+zip([10, 20, 30], ["a", "b", "c"])
+```
+
+## Example 2
+
+Here's an example where excess elements on one side are ignored:
+
+```
+// evaluates to [[10, "a"], [20, "b"], [30, "c"]]:
+zip([10, 20, 30, 40, 50], ["a", "b", "c"])
+```
 
