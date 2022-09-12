@@ -13,7 +13,7 @@
   "scripts": {
     "test": "jest",
     "build": "rm -rf ./dist && tsc",
-    "start:dev": "ts-node index.ts",
+    "start:dev": "ts-node src/index.ts",
     "postinstall": "mkdir -p etc",
     "extract-api": "yarn build && api-extractor run --local --verbose",
     "gen-docs": "yarn extract-api && yarn api-documenter markdown  --input-folder temp --output-folder docs/api"
